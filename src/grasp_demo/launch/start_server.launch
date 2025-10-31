@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>	
+
+	<!--start server -->
+	<node pkg="grasp_demo" type="cam_to_real.py" name= "cam_to_real"   />
+	<node pkg="grasp_demo" type="find_object.py" name= "find_object"   />
+	<node pkg="grasp_demo" type="tf_broadcast.py" name= "tf_broadcast"   />
+	<node pkg="grasp_demo" type="tf_listener.py" name= "tf_listener"   output="screen"/>
+
+</launch>

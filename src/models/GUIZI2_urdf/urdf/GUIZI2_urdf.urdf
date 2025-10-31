@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot
+  name="GUIZI2_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.6653E-16 2.1094E-15 0.435"
+        rpy="0 0 0" />
+      <mass
+        value="8.748" />
+      <inertia
+        ixx="1.3398"
+        ixy="-1.9187E-15"
+        ixz="-2.4083E-15"
+        iyy="1.4034"
+        iyz="-1.0164E-15"
+        izz="1.0264" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GUIZI2_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GUIZI2_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/urGrey</material>
+    </gazebo>
+
+</robot>

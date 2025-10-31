@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+      <node name="Erliao3_urdf_1" pkg="gazebo_ros" type="spawn_model" 
+            args="-file $(find arm_gazebo)/models/Erliao3_urdf/model.sdf -sdf -model Erliao3_urdf_1 -x -0.3 -y -0.12 -z 0.15" />
+
+      <!-- <node name="Erliao3_urdf_2" pkg="gazebo_ros" type="spawn_model" 
+            args="-file $(find arm_gazebo)/models/Erliao3_urdf/model.sdf -sdf -model Erliao3_urdf_2 -x -0.33 -y 0.065 -z 0.15" /> -->
+
+      <node name="Erliao3_urdf_3" pkg="gazebo_ros" type="spawn_model" 
+            args="-file $(find arm_gazebo)/models/Erliao3_urdf/model.sdf -sdf -model Erliao3_urdf_3 -x -0.25 -y -0.0 -z 0.15" />
+
+      <node name="Erliao3_urdf_4" pkg="gazebo_ros" type="spawn_model" 
+            args="-file $(find arm_gazebo)/models/Erliao3_urdf/model.sdf -sdf -model Erliao3_urdf_4 -x -0.39 -y -0.045 -z 0.15" />
+
+</launch>
+

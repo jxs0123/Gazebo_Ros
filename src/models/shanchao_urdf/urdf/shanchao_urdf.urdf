@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shanchao_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0022002 0.054685 0.091496"
+        rpy="0 0 0" />
+      <mass
+        value="3.5537" />
+      <inertia
+        ixx="0.070429"
+        ixy="9.0782E-05"
+        ixz="0.00013877"
+        iyy="0.076018"
+        iyz="-0.0074637"
+        izz="0.13255" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shanchao_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shanchao_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/urGrey</material>
+    </gazebo>
+
+</robot>
