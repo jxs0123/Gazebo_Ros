@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot
+  name="gripper_description">
+  <link
+    name="gripper_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0004684975887838 0.00303048592831926 0.0502886435926091"
+        rpy="0 0 0" />
+      <mass
+        value="0.338451530379819" />
+      <inertia
+        ixx="0.000176005566867876"
+        ixy="-6.64408835735538E-09"
+        ixz="1.13135832689069E-07"
+        iyy="0.000237259038170363"
+        iyz="1.89171837600438E-06"
+        izz="0.000213929505027592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Gripper_Link1">
+    <inertial>
+      <origin
+        xyz="0.0280069393107553 0.00611122757021528 -0.00200684068788289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0252253473341853" />
+      <inertia
+        ixx="3.64693126790912E-06"
+        ixy="-1.25306744959638E-08"
+        ixz="-6.52209709686841E-07"
+        iyy="7.00716884133288E-06"
+        iyz="1.03549055739974E-07"
+        izz="4.79349978637373E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Gripper_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Gripper_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper_Joint1"
+    type="prismatic">
+    <origin
+      xyz="0.00947 -0.009 0.10472"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="gripper_base_link" />
+    <child
+      link="Gripper_Link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="Gripper_Link2">
+    <inertial>
+      <origin
+        xyz="0.0280069393107553 0.00611122757021521 -0.00200684068788287"
+        rpy="0 0 0" />
+      <mass
+        value="0.0252253473341853" />
+      <inertia
+        ixx="3.64693126790912E-06"
+        ixy="-1.25306744959344E-08"
+        ixz="-6.52209709686843E-07"
+        iyy="7.00716884133288E-06"
+        iyz="1.03549055739979E-07"
+        izz="4.79349978637373E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Gripper_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Gripper_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper_Joint2"
+    type="prismatic">
+    <origin
+      xyz="-0.00947 0.009 0.10472"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="gripper_base_link" />
+    <child
+      link="Gripper_Link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="Camera_Link3">
+    <inertial>
+      <origin
+        xyz="-6.45917661786042E-06 -2.58386344099554E-05 0.0147332789871856"
+        rpy="0 0 0" />
+      <mass
+        value="0.0547058531734444" />
+      <inertia
+        ixx="6.23440458905677E-06"
+        ixy="4.47738142991786E-11"
+        ixz="5.1211068270788E-09"
+        iyy="3.30237698271353E-05"
+        iyz="2.48412900210222E-08"
+        izz="3.17409016851319E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Camera_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gripper_description/meshes/Camera_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Camera_Joint3"
+    type="fixed">
+    <origin
+      xyz="0 0.08948 0.05452"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_base_link" />
+    <child
+      link="Camera_Link3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
